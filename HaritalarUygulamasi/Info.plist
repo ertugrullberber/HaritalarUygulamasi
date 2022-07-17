@@ -4,10 +4,27 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>UIApplicationSupportsTabbedSceneCollection</key>
+		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
 		<dict>
+			<key></key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string></string>
+					<key>UISceneDelegateClassName</key>
+					<string></string>
+					<key>UISceneConfigurationName</key>
+					<string></string>
+					<key>UISceneStoryboardFile</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>Privacy - Location When In Use Usage Description</key>
+			<string>Konumunuzu Alabilmek Icin</string>
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
