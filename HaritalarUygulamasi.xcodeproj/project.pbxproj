@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		585D1648288302C200473C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D1647288302C200473C77 /* AppDelegate.swift */; };
 		585D164A288302C200473C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D1649288302C200473C77 /* SceneDelegate.swift */; };
-		585D164C288302C200473C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D164B288302C200473C77 /* ViewController.swift */; };
+		585D164C288302C200473C77 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D164B288302C200473C77 /* MapsViewController.swift */; };
 		585D164F288302C200473C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585D164D288302C200473C77 /* Main.storyboard */; };
 		585D1652288302C200473C77 /* HaritalarUygulamasi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 585D1650288302C200473C77 /* HaritalarUygulamasi.xcdatamodeld */; };
 		585D1654288302C500473C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585D1653288302C500473C77 /* Assets.xcassets */; };
@@ -17,6 +17,7 @@
 		585D1662288302C500473C77 /* HaritalarUygulamasiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D1661288302C500473C77 /* HaritalarUygulamasiTests.swift */; };
 		585D166C288302C500473C77 /* HaritalarUygulamasiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D166B288302C500473C77 /* HaritalarUygulamasiUITests.swift */; };
 		585D166E288302C500473C77 /* HaritalarUygulamasiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D166D288302C500473C77 /* HaritalarUygulamasiUITestsLaunchTests.swift */; };
+		589C52AA2889719800E888E7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C52A92889719800E888E7 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 		585D1644288302C200473C77 /* HaritalarUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaritalarUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585D1647288302C200473C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		585D1649288302C200473C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		585D164B288302C200473C77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		585D164B288302C200473C77 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		585D164E288302C200473C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		585D1651288302C200473C77 /* HaritalarUygulamasi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HaritalarUygulamasi.xcdatamodel; sourceTree = "<group>"; };
 		585D1653288302C500473C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		585D1667288302C500473C77 /* HaritalarUygulamasiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaritalarUygulamasiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585D166B288302C500473C77 /* HaritalarUygulamasiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaritalarUygulamasiUITests.swift; sourceTree = "<group>"; };
 		585D166D288302C500473C77 /* HaritalarUygulamasiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaritalarUygulamasiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		589C52A92889719800E888E7 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,8 @@
 			children = (
 				585D1647288302C200473C77 /* AppDelegate.swift */,
 				585D1649288302C200473C77 /* SceneDelegate.swift */,
-				585D164B288302C200473C77 /* ViewController.swift */,
+				585D164B288302C200473C77 /* MapsViewController.swift */,
+				589C52A92889719800E888E7 /* ListViewController.swift */,
 				585D164D288302C200473C77 /* Main.storyboard */,
 				585D1653288302C500473C77 /* Assets.xcassets */,
 				585D1655288302C500473C77 /* LaunchScreen.storyboard */,
@@ -261,9 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585D164C288302C200473C77 /* ViewController.swift in Sources */,
+				585D164C288302C200473C77 /* MapsViewController.swift in Sources */,
 				585D1648288302C200473C77 /* AppDelegate.swift in Sources */,
 				585D1652288302C200473C77 /* HaritalarUygulamasi.xcdatamodeld in Sources */,
+				589C52AA2889719800E888E7 /* ListViewController.swift in Sources */,
 				585D164A288302C200473C77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

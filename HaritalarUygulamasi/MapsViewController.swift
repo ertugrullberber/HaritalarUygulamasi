@@ -8,12 +8,22 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var isimTextField: UITextField!
+    @IBOutlet weak var notTextField: UITextField!
+    
     
     var locationManager = CLLocationManager()
+    var secilenLatitude = Double()
+    var secilenLongitude = Double()
+    
+    var secilenIsim = ""
+    var secilenID : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,6 +37,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         gestureRecognizer.minimumPressDuration = 3
         mapView.addGestureRecognizer(gestureRecognizer)
         
+        
+        if secilenIsim != "" {
+            //core data dan veriler cek
+            
+            if let uuidString = secilenID?.uuidString{
+                print(uuidString)
+            }
+        } else {
+            // yeni veri eklemeye geldi
+        }
+        
     }
     
     @objc func konumSec(gestureRecognizer : UILongPressGestureRecognizer) {
@@ -34,10 +55,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let dokunulanNokta = gestureRecognizer.location(in: mapView)
             let dokunulanKoordinat = mapView.convert(dokunulanNokta,toCoordinateFrom: mapView)
             
+            secilenLatitude = dokunulanKoordinat.latitude
+            secilenLongitude = dokunulanKoordinat.longitude
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate = dokunulanKoordinat
-            annotation.title = "Kullanici secimi"
-            annotation.subtitle = "ornek altyazi"
+            annotation.title = isimTextField.text
+            annotation.subtitle = notTextField.text
             mapView.addAnnotation(annotation)
         }
     }
@@ -52,6 +76,28 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true)
     }
 
-
+    @IBAction func kaydetTiklandi(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let yeniYer = NSEntityDescription.insertNewObject(forEntityName: "Yer", into: context)
+        
+        yeniYer.setValue(isimTextField.text, forKey: "isim")
+        yeniYer.setValue(notTextField.text, forKey: "not")
+        yeniYer.setValue(secilenLatitude, forKey: "latitude")
+        yeniYer.setValue(secilenLongitude, forKey: "longitude")
+        yeniYer.setValue(UUID(), forKey: "id")
+        
+        do {
+            try context.save()
+            print("kayit edildi")
+        } catch {
+            print("hata")
+        }
+    }
+    
+    
+    
 }
 
